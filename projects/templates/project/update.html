@@ -1,6 +1,5 @@
 {% extends "base.html" %}
 {% load i18n %}
-{% load humanize %}
 {% block content%}
 
 <nav aria-label="breadcrumb">
@@ -30,24 +29,22 @@
                     </div>
                 </div>
                 <div class="card-footer">
-                    <div class="d-grid gap-2">
+                    <div class="d-grid gap-2 mb-2">
                         <button class="btn btn-success">
                             <i class="bi bi-save">{% trans 'Save' %}</i>
                         </button>
                     </div>
-                </div>
-                <div class="card-footer">
                     <div class="d-grid gap-2">
-                        <button class="btn btn-danger">
+                        <a href="{% url 'ProjectDelete' object.id %}" class="btn btn-danger">
                             <i class="bi bi-trash">{% trans 'Delete' %}</i>
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>
         </form>
     </div>
     <div class="col-md-9">
-        {% include 'task.html' with project=object %}
+        {% include 'task/task.html' with project=object %}
     </div>
 </div>
 

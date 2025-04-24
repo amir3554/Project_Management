@@ -137,7 +137,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTHENTICATION_BACKENDS = ['django.contrib.auth.backends.ModelBackend']
 
 LOGIN_URL = 'users/login/'
-LOGIN_REDIRECT_URL = '/myprojectmanager/diary/index'
+LOGIN_REDIRECT_URL = '/myprojectmanager/project/'
 LOGOUT_REDIRECT_URL = '/myprojectmanager/'
 
 SESSION_COOKIE_HTTPONLY = True

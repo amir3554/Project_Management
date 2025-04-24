@@ -5,24 +5,24 @@ from django import forms
 attrs = {'class' : 'form-control'}
 
 
-class UserLoginForm(UserCreationForm):
+class UserLoginForm(AuthenticationForm):
     
     def __init__(self, *args, **kwargs):
         super(UserLoginForm, self).__init__(*args, **kwargs)
 
     username = forms.CharField(
-        label='UserName',
+        label='username',
         widget=forms.TextInput(attrs=attrs)
     )
 
     password = forms.CharField(
-        label='Password',
+        label='password',
         widget=forms.PasswordInput(attrs=attrs)
     )
 
 
 
-class UserRegisterForm(AuthenticationForm):
+class UserRegisterForm(UserCreationForm):
     
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)

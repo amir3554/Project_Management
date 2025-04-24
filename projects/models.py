@@ -19,7 +19,7 @@ class ProjectStatus(models.IntegerChoices):
 class Project(models.Model):
     title = models.CharField(max_length=255)
     description = models.TextField()
-    status = models.IntegerChoices(choices=ProjectStatus.choices, default=ProjectStatus.PENDING)
+    status = models.IntegerField(choices=ProjectStatus.choices, default=ProjectStatus.PENDING)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     category = models.ForeignKey(Category, on_delete=models.PROTECT)
