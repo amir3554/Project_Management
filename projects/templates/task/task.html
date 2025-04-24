@@ -3,7 +3,7 @@
 <ul class="list-group">
     {% for task in project.task_set.all %}
     <li class="list-group-item d-flex">
-        <form class="my-auto me-2" method="post" action="{% url 'update_task' task.id %}">
+        <form class="my-auto me-2" method="post" action="{% url 'TaskUpdate' task.id %}">
             {% csrf_token %}
             <input
             class="form=check-input"
@@ -25,7 +25,7 @@
 </ul>
 
 <div class="card mt-2">
-    <form class="d-flex" method="post" action="{% url 'create_task' %}">
+    <form class="d-flex" method="post" action="{% url 'TaskCreate' %}">
         {% csrf_token %}
         <div class="input-group" >
             <input type="hidden" value="{{ project.id }}" name="project">

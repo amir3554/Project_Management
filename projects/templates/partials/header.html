@@ -3,14 +3,14 @@
 <header>
 <nav class="navbar navbar-expand-md bg-gradient bg-success navbar-dark p-3 ">
     <div class="container-fluid">
-        <a class="navbar-brand" href="{% url 'projects_list' %}">{% trans 'Projects Managemant' %}</a>
+        <a class="navbar-brand" href="{% url 'ProjectsList' %}">{% trans 'Projects Managemant' %}</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavCollapse" aria-controls="navbarNavCollapse" aria-expanded="false">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavCollapse">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="{% url 'projects_list' %}">{% trans 'home' %}</a>
+                    <a class="nav-link active" aria-current="page" href="{% url 'ProjectsList' %}">{% trans 'home' %}</a>
                 </li>
             </ul>
             {% if user.is_authenticated %}
@@ -40,10 +40,10 @@
                 </div>
             </form>
             {% else %}
-                <a class="btn btn-outline-light mx" href="{% url 'register' %}">
+                <a class="btn btn-outline-light mx" href="{% url 'Register' %}">
                     {% trans 'Register' %}
                 </a>
-                <a class="btn btn-outline-light" href="{% url 'login' %}">
+                <a class="btn btn-outline-light" href="{% url 'Login' %}">
                     {% trans 'login' %}
                 </a>
             {% endif %}
