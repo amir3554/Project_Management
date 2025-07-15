@@ -1,0 +1,40 @@
+This Projects Manager web application builds on our original “Project1” by layering in robust multi-user support, granular data organization, and enterprise-grade security. Key features include:
+
+-User Management & Security:
+
+	-Full authentication and authorization system with role-based access controls (e.g. Admin, Member).
+
+
+	-Secure password hashing and email verification
+
+	-protection against CSRF, XSS, and SQL injection.
+
+-Categorization & Organization:
+
+	-Projects are grouped into admin-defined Categories; each Project must belong to exactly one Category.
+
+	-admin can create, rename, reorder, and archive Categories to keep the workspace tidy.
+
+
+-Projects & Tasks:
+
+	-Projects: the app allows users to create, view, update, and delete projects. Each project carries metadata like title, description, start/end dates, and status.
+
+	-Tasks: Every Project has its own task list; tasks support titles, descriptions and status (done:True, or else False).
+
+-front end:
+
+	-built using bootstrap5 and coordinated beautifully to make the application user friendly and improving the experience.
+
+
+
+
+
+
+
+
+
+
+
+
+
